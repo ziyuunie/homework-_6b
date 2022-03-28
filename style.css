@@ -1,0 +1,367 @@
+/*********** UNIVERSAL ************/
+html {
+    font-family: 'Arial';
+    text-align: left;
+    color: black;
+}
+
+/*********** TEXT ************/
+h1 {
+    font-weight: 700;
+    font-size: 64px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/*********** HEADER ************/
+.header {
+    overflow: hidden;
+    text-align: center;
+}
+
+.header a {
+    float: right;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header a.current {
+    text-decoration: underline;
+    text-underline-position: under;
+    color: black;
+}
+
+.header a:hover {
+    color: #ACACAC;
+}
+
+/*********** LINKS ************/
+a:link {
+    color: #ACACAC;
+    text-underline-position: under;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #BB0000;
+}
+
+a:active {
+    color: black;
+}
+
+/*********** DROPDOWN ************/
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdownmenu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    background-color: #FFFFFF;
+    color: black;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdownmenu a {
+    float: none;
+    font-size: 20px;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.dropdownmenu a:hover {
+    background-color: #ACACAC;
+    color: black;
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+}
+
+/*********** POPUP ************/
+.modal {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    padding-top: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.popupcontent {
+    border: 2.5px solid #ACACAC;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+
+.close {
+    color: #ACACAC;
+    float: right;
+    font-size: 40px;
+    padding-right: 15px;
+    margin-top: -30px;
+}
+
+.close:hover, .close:focus{
+    color: #BB0000;
+}
+
+/*********** CLICK ************/
+button {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: #BB0000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #BB0000;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #BB0000;
+    border-radius: 10px;
+    border: 2px solid #BB0000;
+}
+
+button[type=general] {
+    font-size: 20px;
+    padding:  15px;
+    margin: 0px;
+}
+
+button[type=submit] {
+    font-size: 20px;
+    padding:  15px;
+    margin: 0px;
+}
+
+button[type=login] {
+    margin: 20px 15px 20px 15px;
+    width: 330px;
+    font-size: 24px;
+    padding:  15px 0px 15px 0px;
+}
+
+input[type=text] {
+    width: 330px;
+    font-size: 20px;
+    padding:15px 0px 15px 10px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #BB0000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=password] {
+    width: 330px;
+    font-size: 20px;
+    padding:15px 0px 15px 10px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #BB0000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=search] {
+    width: 600px;
+    font-size: 20px;
+    padding:15px 0px 15px 10px;
+    margin: 10px 10px 10px 0px;
+    display: inline-block;
+    border: 1px solid #BB0000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #ACACAC;
+}
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+select {
+    height: 35px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+/*********** TABLE ************/
+.filter {
+    overflow: hidden;
+    text-align: center;
+}
+
+.filter a {
+    float: left;
+    color: #ACACAC;
+    padding: 40px 16px 0px 0px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.filter a.current {
+    color: black;
+}
+
+table {
+     width: 100%;
+     border-collapse: collapse;
+     font-weight: 400;
+}
+
+table[type=header] {
+     font-size: 20px;
+     padding: 10px 0px;
+     margin-top: 20px;
+     margin-bottom: 20px;
+}
+
+table[type=content] {
+     font-size: 24px;
+     margin-bottom: 50px;
+     height: 150px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*********** BODY ************/
+ol {
+    font-size: 20px;
+}
+
+.hcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*********** COLUMNS ************/
+.column {
+    float: left;
+}
+
+
+.left {
+    margin-top: 187.185px;
+    margin-left: 100px;
+    padding-right: 50px;
+    width: 780px;
+    text-align: left;
+}
+
+.right {
+    margin-top:175px;
+    margin-right: 100px;
+    width: 350px;
+    padding: 40px 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.boxed {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Solid border */
+hr.solid {
+    border-top: 1px solid #E5E5E5;
+}
+/*********** TEXT ADJUSTMENT ************/
+.bold {
+    font-weight: 700;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.center {
+    text-align: center;
+}
+
+.tabbed {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.pass {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.light {
+    color: #ACACAC;
+}
+
+.click {
+    color: #BB0000;
+    text-decoration: underline;
+}
+
+  .small {
+    line-height: 70%;
+}
+
+  .larger {
+    line-height: 170%;
+}
+
+  .fs20 {
+    font-size: 20px;
+    line-height: 160%;
+  }
