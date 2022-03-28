@@ -32,7 +32,7 @@
 
         <hr class="solid" style="margin-bottom: 30px;">
 
-        <form id="schedule2" action="detail.html">
+        <form id="schedule2" action="detail.html" method="post">
 
             <div class="boxed">
 
@@ -40,33 +40,33 @@
                 <div class="larger">
                     <select id="location" name=location required>
                         <option hidden disabled selected value>-- Select location --</option>
-                        <option value="ecg">East Campus Garage</option>
-                        <option value="uc">Cohon University Center</option>
+                        <option value="East Campus Garage">East Campus Garage</option>
+                        <option value="Cohon University Center">Cohon University Center</option>
                     </select>
                 </div>
 
                 <h3 class="bold">Select appointment date</h3>
                 <div class="larger">
-                    <select id="date" name="date" onclick="chooseLocation()" required>
+                    <select id="date" name=date required>
                         <option selected disabled hidden style='display: none' value=''>-- Select date --</option>
-                        <option value="mar">March 31, 2022</option>
-                        <option value="april">April 1, 2022</option>
+                        <option value="March 31, 2022 (Thursday)">March 31, 2022</option>
+                        <option value="April 1, 2022 (Friday)">April 1, 2022</option>
                     </select>
                 </div>
 
                 <h3 class="bold">Select appointment time</h3>
                 <div class="larger">
-                <select id="time" name="time" onclick="chooseLocation()" required>
+                <select id="time" name=time required>
                     <option selected disabled hidden style='display: none' value=''>-- Select time --</option>
-                    <option value="9:00AM">9:00 AM</option>
-                    <option value="10:00AM">10:00 AM</option>
-                    <option value="11:00AM">11:00 AM</option>
+                    <option value="9:00 AM - 9:30 AM">9:00AM - 9:30AM</option>
+                    <option value="10:00 AM - 10:30 AM">10:00AM - 10:30AM</option>
+                    <option value="11:00 AM - 11:30 AM">11:00AM - 11:30AM</option>
                 </select>
                 </div>
 
                 <div style="margin-bottom: 40px;"></div>
 
-                <input type="submit" value="Confirm"><a href="detail.html" style="text-decoration: none; color: inherit;"></a>
+                <input type="submit" value="Confirm" onclick="setLocation(); setDate(); setTime(); setAppt();">
 
             </div>
 

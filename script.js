@@ -8,42 +8,47 @@ window.onclick = function(event) {
   }
 }
 
-function scheduleAppt()
-{
-  localStorage.setItem("apptLocation",document.getElementById("location").value);
-  localStorage.setItem("apptDate",document.getElementById("date").value);
-  localStorage.setItem("apptTime",document.getElementById("time").value);
-
-  apptInfo();
+//local storage for location
+function setLocation() {
+  var selectedlocation = document.getElementById("location").value;
+  localStorage.setItem("locationvalue", selectedlocation);
 }
 
-function apptInfo() {
-  document.getElementById("demo").innerHTML = localStorage.getItem("apptLocation");
-  document.getElementById("apptDate").innerHTML = localStorage.getItem("apptDate");
-  document.getElementById("apptTime").innerHTML = localStorage.getItem("apptTime");
+//local storage for date
+function setDate() {
+  var selecteddate = document.getElementById("date").value;
+  localStorage.setItem("datevalue", selecteddate);
 }
 
-//error when choosing date/time before location
-function chooseLocation() {
-  var location = document.forms["schedule2"]["location"].value;
-  if (location == "ecg") {
-    return true;
+//local storage for time
+function setTime() {
+  var selectedtime = document.getElementById("time").value;
+  localStorage.setItem("timevalue", selectedtime);
+}
+
+//local storage for reason
+function setReason() {
+  if (document.getElementById('testing').checked) {
+    var selectedreason = document.getElementById('testing').value;
+    localStorage.setItem("reasonvalue", selectedreason);
   }
-  if else (location == "uc") {
-    return true;
+  else if (document.getElementById('vaccine').checked) {
+    var selectedreason = document.getElementById('vaccine').value;
+    localStorage.setItem("reasonvalue", selectedreason);
+  }
+  else if (document.getElementById('second').checked) {
+    var selectedreason = document.getElementById('second').value;
+    localStorage.setItem("reasonvalue", selectedreason);
   }
   else {
-    alert("Error: You must first select a location for your appointment.");
-    return false;
+    var selectedreason = document.getElementById('booster').value;
+    localStorage.setItem("reasonvalue", selectedreason);
   }
 }
 
-function validateForm() {
-  var apptLoc = document.getElementById("location");
-        if (location.value == "") {
-            //If the "Please Select" option is selected display error.
-            alert("Please select a location!");
-            return false;
-        }
-        return true;
+function setAppt() {
+  document.getElementById("apptreason").innerHTML = localStorage.getItem("reasonvalue");
+  document.getElementById("apptlocation").innerHTML = localStorage.getItem("locationvalue");
+  document.getElementById("apptdate").innerHTML = localStorage.getItem("datevalue");
+  document.getElementById("appttime").innerHTML = localStorage.getItem("timevalue");
 }

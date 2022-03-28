@@ -32,22 +32,30 @@
 
         <hr class="solid" style="margin-bottom: 30px;">
 
-        <div class="boxed">
+        <div class="boxed" onload="setAppt()">
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Allenton_Hippo_QR_Code.jpg" alt="commons.wikimedia.org" style="float: right;width:280px;height:280px; padding-top: 60px; padding-right: 30px;">
 
-            <h2 class="bold">Tartan Testing</h2>
+            <h2 class="bold"><span id="apptreason"></span> </h2>
 
             <div id='location'>
-                <p class="bold"><i class="fa fa-location-arrow" style="font-size:24px"></i> East Campus Garage</p>
+                <p class="bold"><i class="fa fa-location-arrow" style="font-size:24px"></i> <span id="apptlocation"></span> </p>
                 <p class="light small">5040 Forbes Ave, Pittsburgh PA 15213<br /><br />412-268-2052</p>
                 <p><a class="detail" href="https://www.google.com/maps/dir/40.435712,-79.9473664/east+campus+garage+cmu/@40.4394101,-79.9523811,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8834f218aae6eda9:0x51988625846ae7b4!2m2!1d-79.941065!2d40.4439601" target="_blank">Get directions</a></p>
+                <script>
+                      document.getElementById("apptreason").innerHTML = localStorage.getItem("reasonvalue");
+                      document.getElementById("apptlocation").innerHTML = localStorage.getItem("locationvalue");
+                </script>
             </div>
 
-            <div id='time'>
-                <p class="bold"><i class="fa fa-calendar-check-o" style="font-size:24px"></i> 9:00 AM - 9:30 AM</p>
-                <p class="light">March 31, 2022 (Thursday)</p>
+            <div id='time' onload="setAppt()">
+                <p class="bold"><i class="fa fa-calendar-check-o" style="font-size:24px"></i> <span id="appttime"></span> </p>
+                <p class="light"><span id="apptdate"></span> </p>
                 <p><a class="detail" href="/">Add to calendar</a></p>
+                <script>
+                      document.getElementById("appttime").innerHTML = localStorage.getItem("timevalue");
+                      document.getElementById("apptdate").innerHTML = localStorage.getItem("datevalue");
+                </script>
             </div>
 
             <div id='information'>
