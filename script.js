@@ -23,29 +23,27 @@ function apptInfo() {
   document.getElementById("apptTime").innerHTML = localStorage.getItem("apptTime");
 }
 
-var upcomingAppts = [];
-localStorage.setItem("apptNum", 2);
-
 //error when choosing date/time before location
 function chooseLocation() {
   var location = document.forms["schedule2"]["location"].value;
-  if (location == "") {
+  if (location == "ecg") {
+    return true;
+  }
+  if else (location == "uc") {
+    return true;
+  }
+  else {
     alert("Error: You must first select a location for your appointment.");
     return false;
   }
 }
 
-//function to display vaccine brand when booking an appointment
-function addVaccineBrand() {
-  if (document.getElementById('pfizer').checked) {
-    vaccine_brand = document.getElementById('pfizer').value;
-  }
-  else if (document.getElementById('moderna').checked) {
-    vaccine_brand = document.getElementById('moderna').value;
-  }
-  else {
-    vaccine_brand = document.getElementById('johnson').value;
-  }
-  console.log(vaccine_brand)
-  document.getElementById('vaccinebrandresults').innerHTML = vaccine_brand;
+function validateForm() {
+  var apptLoc = document.getElementById("location");
+        if (location.value == "") {
+            //If the "Please Select" option is selected display error.
+            alert("Please select a location!");
+            return false;
+        }
+        return true;
 }
