@@ -75,6 +75,24 @@
             </table>
         </div>
 
+        <div id='new appt'>
+            <table type="content">
+                <tr>
+                    <td class="center" style="width: 14%">2022-3-31</td>
+                    <td class="center" style="width: 18%"><span style="font-weight: 700;">10:00 AM</span><br><span style="color: #ACACAC">10:30 AM</span></td>
+                    <td style="width: 30%"><span id="apptlocation"></td>
+                    <td style="width: 33%"><span id="apptreason"></td>
+                    <td style="width: 5%"><a href="detail.html"><i class="fa fa-angle-right" style="font-size:36px"></i></td>
+                </tr>
+            </table>
+            <script>
+                  document.getElementById("apptreason").innerHTML = localStorage.getItem("reasonvalue");
+                  document.getElementById("apptlocation").innerHTML = localStorage.getItem("locationvalue");
+                  document.getElementById("apptdate").innerHTML = localStorage.getItem("datevalue");
+                  document.getElementById("appttime").innerHTML = localStorage.getItem("timevalue");
+            </script>
+        </div>
+
         <p><span style="color: #ACACAC">You can receive text message appointment reminders and other alerts:</span> <a href="sms:000000;?&body=Sign me up for HealthConnect text alerts">Enable text messages</a></p>
 
     </div>
