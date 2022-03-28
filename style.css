@@ -66,6 +66,23 @@ a:active {
     color: black;
 }
 
+a.detail:link {
+    color: #BB0000;
+    text-underline-position: under;
+}
+
+a.detail:visited {
+    color: #BB0000;
+}
+
+a.detail:hover {
+    color: black;
+}
+
+a.detail:active {
+    color: #ACACAC;
+}
+
 /*********** DROPDOWN ************/
 .dropdown {
     float: right;
@@ -346,11 +363,6 @@ hr.solid {
 
 .light {
     color: #ACACAC;
-}
-
-.click {
-    color: #BB0000;
-    text-decoration: underline;
 }
 
   .small {
